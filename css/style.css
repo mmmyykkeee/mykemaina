@@ -5,7 +5,9 @@
 
 /* Global styles
 ================================================== */
-
+*{
+  border: 1px solid red;
+}
 html {
   overflow-x: hidden !important;
   width: 100%;
