@@ -15,7 +15,7 @@
 svg {
   position: absolute;
   z-index: 1;
-  width: 681px;
+  width: 700px;
   height: 384px;
 }
 
@@ -64,9 +64,9 @@ circle {
 }
 
 .right {
-  margin-left: 23%;
+  margin-left: 22.3%;
   margin-top: 168px;
-  border: 1px solid #849494;
+  border: 1px solid #fff;
   background-color: transparent;
   transition: 0.5s;
 }
@@ -77,7 +77,7 @@ circle {
 .left {
   margin-left: 0.5%;
   margin-top: 168px;
-  border: 1px solid #849494;
+  border: 1px solid #fff;
   background-color: transparent;
   transition: 0.5s;
 }
