@@ -1,5 +1,5 @@
 .parent {
-  width: auto;
+  width: 95vw;
   height: 384px;
   top: 0;
   bottom: 0;
@@ -8,7 +8,7 @@
   margin: -10em auto 8em auto;
   overflow: hidden;
   position: relative;
-  border-radius: 16px;
+  border-radius: 5px;
   box-shadow: 0 0 8px 5px rgba(216, 211, 211, 0.75);
 }
 
@@ -232,6 +232,21 @@ circle {
     display: none;
   }
 
+}
+@media (max-width: 500px) {
+  .typing-demo{
+    width: 95% !important;
+  }
+}
+@media (max-width: 450px) {
+.typing-demo{
+  font-size: 80% !important;
+  width: 70%;
+  
+}
+.nobc{
+  width: 90vw;
+}
 }
 
 #hide {

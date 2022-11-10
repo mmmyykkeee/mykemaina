@@ -5,8 +5,8 @@
 
 /* Global styles
 ================================================== */
-*{
-  border: 1px solid red;
+.timeline-label{
+  width: 85% !important;
 }
 html {
   overflow-x: hidden !important;
