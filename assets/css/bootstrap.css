@@ -4212,7 +4212,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 20px;
+  line-height: 2px;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4230,7 +4230,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding: 5px 15px 5px 25px;
   }
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 20px;
+    line-height: 2px !important;
   }
   .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-nav .open .dropdown-menu > li > a:focus {

@@ -15,6 +15,7 @@ html {
   position: relative;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -255,10 +256,10 @@ h2.title span {
   background-color: #677179;
 }
 .navbar-default .navbar-toggle {
-  border-color: #09c3e7;
+  border-color: #000000;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #70bbfa;
+  background-color: #424446;
 }
 .navbar-toggle {
   position: relative;
@@ -289,7 +290,7 @@ h2.title span {
 }
 .navbar-default .navbar-nav > li > a {
   font-weight: 300;
-  padding: 30px 20px;
+  padding: 5px 20px;
   font-size: 18px;
   font-family: "Roboto", serif;
   color: rgb(8, 8, 8);

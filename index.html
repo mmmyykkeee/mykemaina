@@ -76,13 +76,13 @@
 
     			<div class="collapse navbar-collapse navigation" id="bs-example-navbar-collapse-1" role="navigation">
     				<ul class="nav navbar-nav navbar-right">
-    					<li class="active"><a href="#section-banner">Home </a></li>
-    					<li><a href="#section-profile">About me </a></li>
-    					<li><a href="#section-skill">Skills </a></li>
-    					<li><a href="#section-resume">Resume </a></li>
-    					<li><a href="#section-testimonial">Testimonials </a></li>
-    					<li><a href="#section-portfolio">Portfolio </a></li>
-    					<li><a href="#section-contact">Contact me </a></li>
+    					<li class="active "><a href="#section-banner">Home </a></li>
+    					<li><a class="js-scroll-trigger" href="#section-profile">About me </a></li>
+    					<li><a class="js-scroll-trigger" href="#section-skill">Skills </a></li>
+    					<li><a class="js-scroll-trigger" href="#section-resume">Resume </a></li>
+    					<li><a class="js-scroll-trigger" href="#section-testimonial">Testimonials </a></li>
+    					<li><a class="js-scroll-trigger" href="#section-portfolio">Portfolio </a></li>
+    					<li><a class="js-scroll-trigger" href="#section-contact">Contact me </a></li>
     				</ul>
     			</div><!-- /.navbar-collapse -->
     		</div><!-- /.container-fluid -->
@@ -768,6 +768,11 @@ function topFunction() {
     })
 }
 </script>
+<script type="text/javascript">    
+           $('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+      </script>
 
   </body>
 </html>

@@ -231,22 +231,20 @@ circle {
   .parent {
     display: none;
   }
-
 }
 @media (max-width: 500px) {
-  .typing-demo{
+  .typing-demo {
     width: 95% !important;
   }
 }
 @media (max-width: 450px) {
-.typing-demo{
-  font-size: 80% !important;
-  width: 70%;
-  
-}
-.nobc{
-  width: 90vw;
-}
+  .typing-demo {
+    font-size: 80% !important;
+    width: 70%;
+  }
+  .nobc {
+    width: 90vw;
+  }
 }
 
 #hide {
@@ -315,74 +313,97 @@ a {
 }
 
 .typing-demo {
-    margin-left: 0;
+  margin-left: 0;
   width: 80ch;
-  animation: typing 4s steps(19), blink .5s step-end infinite alternate;
+  animation: typing 4s steps(19), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid transparent;
-   font-weight: 800;
-  font-family: '';
-    font-size: 34px;
-    color: white;
+  font-weight: 800;
+  font-family: "";
+  font-size: 34px;
+  color: white;
 }
 
 .typing-demo2 {
-    margin-left: 0;
+  margin-left: 0;
   width: 8ch;
-  animation: typing 2s steps(6), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(6), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid transparent;
-   font-weight: 800;
-  font-family: '';
-    font-size: 34px;
-    color: white;
+  font-weight: 800;
+  font-family: "";
+  font-size: 34px;
+  color: white;
 }
 
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 }
-    
+
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
 }
 
-.veffect
- {
-	background-image: url(https://i.gifer.com/ItN.gif);
-	background-size: cover;
-	color: transparent;
-	-moz-background-clip: text;
-	-webkit-background-clip: text;
-	font-size: 1em;
-	
+.veffect {
+  background-image: url(https://i.gifer.com/ItN.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 1em;
 }
 
-.vkeffect
- {
-	background-image: url(http://www.abflags.com/_flags/flags-of-the-world/Kenya%20flag/Kenya%20flag-XXL-anim.gif);
-	background-size:contain;
-	color: transparent;
-	-moz-background-clip: text;
-	-webkit-background-clip: text;
-	font-size: 100.2%;
+.vkeffect {
+  background-image: url(http://www.abflags.com/_flags/flags-of-the-world/Kenya%20flag/Kenya%20flag-XXL-anim.gif);
+  background-size: contain;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 100.2%;
   font-weight: 800;
-	
 }
 
-.nobc{
+.nobc {
   color: #2c1e1e;
   font-weight: 800;
 }
 
-.logo{
-width: 5em;
+.logo {
+  width: 5em;
 
-margin-top:-25px;
-  
+  margin-top: -25px;
 }
+
+@media (max-width: 376px) {
+  .timeline-entry-inner {
+    width: 89vw !important;
+   }
+   #section-overview {
+  padding-left: 10px!important;
+}
+   .navbar-default .navbar-nav > li > a {
+  font-weight: 300;
+  padding: 2px 20px !important;
+}
+}
+@media (max-width: 420px) {
+  .timeline-entry-inner {
+    width: 89vw !important;
+   }
+   #section-overview {
+  padding-left: 10px!important;
+}
+  }
+
+  @media (min-width: 1024px){
+    .logo{
+     
+      margin-top: -48px;
+    }
+  }
