@@ -23,38 +23,28 @@
   
 */
 
-
-jQuery(function($) {
+jQuery(function ($) {
   "use strict";
 
-   $('.navigation').singlePageNav({
-        currentClass: 'active',
-        changeHash: true,
-        scrollSpeed: 750,
-        offset: 0,
-        filter: ':not(.external)',
-        easing: 'swing',
+  $(".navigation").singlePageNav({
+    currentClass: "active",
+    changeHash: true,
+    scrollSpeed: 750,
+    offset: 0,
+    filter: ":not(.external)",
+    easing: "swing",
+  });
 
-    });
+  $.noConflict();
+  $(".nav a").on("click", function () {
+    if ($(".navbar-toggle").css("display") != "none") {
+      $(".navbar-toggle").trigger("click");
+    }
+  });
 
-    $.noConflict();
-     $('.nav a').on('click', function(){ 
-        if($('.navbar-toggle').css('display') !='none'){
-            $(".navbar-toggle").trigger( "click" );
-        }
-    });
+  // prettyphoto
 
-
- 
-// prettyphoto
-
- $("a[data-rel^='prettyPhoto']").prettyPhoto();
- 
-    
- 
-
-
-
+  $("a[data-rel^='prettyPhoto']").prettyPhoto();
 });
 
 var curpage = 1;
@@ -68,123 +58,123 @@ var transitionPrefix = "circle";
 var svg = true;
 
 function leftSlide() {
-	if (click) {
-		if (curpage == 1) curpage = 5;
-		console.log("woek");
-		sliding = true;
-		curpage--;
-		svg = true;
-		click = false;
-		for (k = 1; k <= 4; k++) {
-			var a1 = document.getElementById(pagePrefix + k);
-			a1.className += " tran";
-		}
-		setTimeout(() => {
-			move();
-		}, 200);
-		setTimeout(() => {
-			for (k = 1; k <= 4; k++) {
-				var a1 = document.getElementById(pagePrefix + k);
-				a1.classList.remove("tran");
-			}
-		}, 1400);
-	}
+  if (click) {
+    if (curpage == 1) curpage = 5;
+    console.log("woek");
+    sliding = true;
+    curpage--;
+    svg = true;
+    click = false;
+    for (k = 1; k <= 4; k++) {
+      var a1 = document.getElementById(pagePrefix + k);
+      a1.className += " tran";
+    }
+    setTimeout(() => {
+      move();
+    }, 200);
+    setTimeout(() => {
+      for (k = 1; k <= 4; k++) {
+        var a1 = document.getElementById(pagePrefix + k);
+        a1.classList.remove("tran");
+      }
+    }, 1400);
+  }
 }
 
 function rightSlide() {
-	if (click) {
-		if (curpage == 4) curpage = 0;
-		console.log("woek");
-		sliding = true;
-		curpage++;
-		svg = false;
-		click = false;
-		for (k = 1; k <= 4; k++) {
-			var a1 = document.getElementById(pagePrefix + k);
-			a1.className += " tran";
-		}
-		setTimeout(() => {
-			move();
-		}, 200);
-		setTimeout(() => {
-			for (k = 1; k <= 4; k++) {
-				var a1 = document.getElementById(pagePrefix + k);
-				a1.classList.remove("tran");
-			}
-		}, 1400);
-	}
+  if (click) {
+    if (curpage == 4) curpage = 0;
+    console.log("woek");
+    sliding = true;
+    curpage++;
+    svg = false;
+    click = false;
+    for (k = 1; k <= 4; k++) {
+      var a1 = document.getElementById(pagePrefix + k);
+      a1.className += " tran";
+    }
+    setTimeout(() => {
+      move();
+    }, 200);
+    setTimeout(() => {
+      for (k = 1; k <= 4; k++) {
+        var a1 = document.getElementById(pagePrefix + k);
+        a1.classList.remove("tran");
+      }
+    }, 1400);
+  }
 }
 
 function move() {
-	if (sliding) {
-		sliding = false;
-		if (svg) {
-			for (j = 1; j <= 9; j++) {
-				var c = document.getElementById(transitionPrefix + j);
-				c.classList.remove("steap");
-				c.setAttribute("class", transitionPrefix + j + " streak");
-				console.log("streak");
-			}
-		} else {
-			for (j = 10; j <= 18; j++) {
-				var c = document.getElementById(transitionPrefix + j);
-				c.classList.remove("steap");
-				c.setAttribute("class", transitionPrefix + j + " streak");
-				console.log("streak");
-			}
-		}
-		setTimeout(() => {
-			for (i = 1; i <= 4; i++) {
-				if (i == curpage) {
-					var a = document.getElementById(pagePrefix + i);
-					a.className += " up1";
-				} else {
-					var b = document.getElementById(pagePrefix + i);
-					b.classList.remove("up1");
-				}
-			}
-			sliding = true;
-		}, 600);
-		setTimeout(() => {
-			click = true;
-		}, 1700);
+  if (sliding) {
+    sliding = false;
+    if (svg) {
+      for (j = 1; j <= 9; j++) {
+        var c = document.getElementById(transitionPrefix + j);
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
+      }
+    } else {
+      for (j = 10; j <= 18; j++) {
+        var c = document.getElementById(transitionPrefix + j);
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
+      }
+    }
+    setTimeout(() => {
+      for (i = 1; i <= 4; i++) {
+        if (i == curpage) {
+          var a = document.getElementById(pagePrefix + i);
+          a.className += " up1";
+        } else {
+          var b = document.getElementById(pagePrefix + i);
+          b.classList.remove("up1");
+        }
+      }
+      sliding = true;
+    }, 600);
+    setTimeout(() => {
+      click = true;
+    }, 1700);
 
-		setTimeout(() => {
-			if (svg) {
-				for (j = 1; j <= 9; j++) {
-					var c = document.getElementById(transitionPrefix + j);
-					c.classList.remove("streak");
-					c.setAttribute("class", transitionPrefix + j + " steap");
-				}
-			} else {
-				for (j = 10; j <= 18; j++) {
-					var c = document.getElementById(transitionPrefix + j);
-					c.classList.remove("streak");
-					c.setAttribute("class", transitionPrefix + j + " steap");
-				}
-				sliding = true;
-			}
-		}, 850);
-		setTimeout(() => {
-			click = true;
-		}, 1700);
-	}
+    setTimeout(() => {
+      if (svg) {
+        for (j = 1; j <= 9; j++) {
+          var c = document.getElementById(transitionPrefix + j);
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
+        }
+      } else {
+        for (j = 10; j <= 18; j++) {
+          var c = document.getElementById(transitionPrefix + j);
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
+        }
+        sliding = true;
+      }
+    }, 850);
+    setTimeout(() => {
+      click = true;
+    }, 1700);
+  }
 }
 
 left.onmousedown = () => {
-	leftSlide();
+  leftSlide();
 };
 
 right.onmousedown = () => {
-	rightSlide();
+  rightSlide();
 };
 
-document.onkeydown = e => {
-	if (e.keyCode == 37) {
-		leftSlide();
-	} else if (e.keyCode == 39) {
-		rightSlide();
-	}
+document.onkeydown = (e) => {
+  if (e.keyCode == 37) {
+    leftSlide();
+  } else if (e.keyCode == 39) {
+    rightSlide();
+  }
 };
 
 //for codepen header
@@ -192,12 +182,10 @@ document.onkeydown = e => {
 // 	rightSlide();
 // }, 500);
 
-
-
 function submitted() {
-	const Toast = Swal.mixin({
+  const Toast = Swal.mixin({
     toast: true,
-    position: 'center',
+    position: "center",
     showConfirmButton: false,
     timer: 5000,
     timerProgressBar: true,
@@ -211,5 +199,23 @@ function submitted() {
     icon: "success",
     title: "Sent successfully",
   });
-
 }
+
+const unsplashUrl = "https://api.unsplash.com/photos/random";
+const accessKey = "B-ijsCQO0HpeXkQYIBb4v4Bi8EbKgC1eRsvNI_AKF6c";
+
+function getRandomImage() {
+  // Fetch a random image from the Unsplash API
+  fetch(`${unsplashUrl}?client_id=${accessKey}`)
+    .then((response) => response.json())
+    .then((json) => {
+      // Get the URL of the image
+      const imageUrl = json.urls.regular;
+
+      // Update the src attribute of the <img> element to display the image
+      document.getElementById("unsplash-image").src = imageUrl;
+    });
+}
+
+// Call the getRandomImage() function when the page loads
+window.onload = getRandomImage;

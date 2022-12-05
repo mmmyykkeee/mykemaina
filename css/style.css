@@ -5,7 +5,7 @@
 
 /* Global styles
 ================================================== */
-.timeline-label{
+.timeline-label {
   width: 85% !important;
 }
 html {
@@ -202,10 +202,27 @@ h2.heading-title {
 ================================================*/
 
 #section-banner {
-  background: url("../images/banner1.jpg");
+  background: url('/images/newsection.jpg');
   background-size: cover;
+  background-position: center;
   z-index: 9999;
+  position: relative;
+  animation: 10s linear 0s normal none infinite animate;
 }
+
+#unsplash-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .me {
+  position: absolute;
+  width: 500px;
+  top: 35%;
+  right: 10%;
+}
+
 .banner-content {
   padding: 250px 0px 300px 0px;
 }
@@ -1105,6 +1122,15 @@ float: right;*/
   .btn-default {
     margin: 20px;
   }
+  .me {
+    display: none;
+  }
+}
+
+@media (min-width: 990px) {
+  .me {
+    width: 80%;
+  }
 }
 
 /* Custom, iPhone Retina */
@@ -1151,4 +1177,7 @@ float: right;*/
   .image-overlay a i {
     margin-top: 110px;
   }
+}
+.show li {
+  list-style: circle;
 }
