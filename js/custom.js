@@ -23,6 +23,8 @@
   
 */
 
+
+
 jQuery(function ($) {
   "use strict";
 
@@ -199,7 +201,17 @@ function submitted() {
     icon: "success",
     title: "Sent successfully",
   });
-}
+};
+window.addEventListener("mouseover", function () {
+  document.querySelector(".innerwidth").textContent = window.innerWidth;
+});
+window.addEventListener('resize', function () {
+   document.getElementById("innerwidth").innerHTML = window.innerWidth;
+  showWidth
+});
+
+
+
 
 const unsplashUrl = "https://api.unsplash.com/photos/random";
 const accessKey = "B-ijsCQO0HpeXkQYIBb4v4Bi8EbKgC1eRsvNI_AKF6c";
