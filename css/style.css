@@ -559,7 +559,6 @@ h2.title span {
 .portfolio-box img {
   aspect-ratio: 3/2 !important;
   object-fit: contain !important;
-  mix-blend-mode: color-burn !important;
   height: 100% !important ;
 }
 

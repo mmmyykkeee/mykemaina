@@ -204,12 +204,18 @@ function submitted() {
 };
 window.addEventListener("mouseover", function () {
   document.querySelector(".innerwidth").textContent = window.innerWidth;
+   document.querySelector(".innerheight").innerHTML = window.innerHeight;
+
 });
 window.addEventListener('resize', function () {
    document.getElementById("innerwidth").innerHTML = window.innerWidth;
+   document.getElementById("innerheight").innerHTML = window.innerHeight;
   showWidth
 });
 
+document.querySelector('.innerwidth').style.color = 'red';
+document.querySelector(".innerwidth").style.position = "fixed";
+document.querySelector(".innerheight").style.position = "fixed";
 
 
 
