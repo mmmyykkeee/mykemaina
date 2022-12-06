@@ -216,13 +216,8 @@ h2.heading-title {
 ================================================*/
 
 #section-banner {
-  background-image: linear-gradient(to right, #00b8d4, #0052cc);
-  background-size: cover;
-  background-position: center;
-  z-index: 9999;
-  position: relative;
-  animation: 10s linear 0s normal none infinite animate;
-}
+  background-image: linear-gradient(to right, #838485, #ebe3e3);
+  }
 
 #unsplash-image {
   position: absolute;
@@ -364,7 +359,7 @@ h2.title span {
 =====================================================*/
 
 #section-overview {
-  padding: 75px 0px 80px;
+  padding: 75px 10px 80px;
 }
 .overview-box {
 }
