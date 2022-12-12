@@ -1201,6 +1201,6 @@ float: right;*/
     margin-top: 110px;
   }
 }
-.show li {
-  list-style: circle;
+.show li::marker {
+  content: '👉   ';
 }
