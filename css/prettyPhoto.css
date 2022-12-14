@@ -249,6 +249,7 @@ circle {
   }
   .nobc {
     width: 90vw;
+    color: #fff !important;
   }
 }
 
@@ -377,7 +378,7 @@ a {
 }
 
 .nobc {
-  color: #2c1e1e;
+  color: #fff;
   font-weight: 800;
 }
 

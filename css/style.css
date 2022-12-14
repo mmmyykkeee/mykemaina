@@ -216,7 +216,11 @@ h2.heading-title {
 ================================================*/
 
 #section-banner {
-  background-image: linear-gradient(to right, #838485, #ebe3e3);
+  background-image: url('../images/download.png');
+  background-color:   #000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff !important;
   }
 
 #unsplash-image {
@@ -309,7 +313,8 @@ h2.title span {
   border: 0px;
   border-radius: 0px;
 }
-.navbar-nav {
+.navbar-nav a {
+  font-weight: 800 !important;
 }
 .navbar-nav li {
   /*padding-right: 40px;*/
