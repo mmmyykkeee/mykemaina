@@ -217,6 +217,7 @@ h2.heading-title {
 
 #section-banner {
   background-image: url('../images/download.png');
+  height: 100vh;
   background-color:   #000;
   background-repeat: no-repeat;
   background-size: contain;
