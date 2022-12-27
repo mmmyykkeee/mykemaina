@@ -23,6 +23,15 @@
   
 */
 
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Come back :(";
+});
+
+window.addEventListener("focus", () => {
+  document.title = docTitle;
+});
+
 jQuery(function ($) {
   "use strict";
 
@@ -233,7 +242,3 @@ function getRandomImage() {
 
 // Call the getRandomImage() function when the page loads
 window.onload = getRandomImage;
-
-
-
-
